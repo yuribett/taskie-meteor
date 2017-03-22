@@ -1,5 +1,10 @@
 Template.list.helpers({
-    tasks : function() {
+
+    tasks : () => {
         return Tasks.find({});
+    },
+
+    formatDate : () => {
+        return moment(this.date).format('DD/MM/YYYY HH:mm');
     }
 });
