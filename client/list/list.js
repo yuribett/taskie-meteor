@@ -13,7 +13,8 @@ Template.list.events({
     
     'click button' : function (event, template) {
         let task = this;
-        Tasks.remove({ _id : task._id });
+        //Tasks.remove({ _id : task._id });
+        Meteor.call('remove', task._id);
     }
 
 });
